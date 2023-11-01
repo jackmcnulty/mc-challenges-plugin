@@ -28,6 +28,8 @@ Download the latest release from CurseForge or something similar (coming soon).
 4. Push the changes to your fork. Please be sure to include thourough documentation and tests.
 5. Open a pull request.
 
+If you have an idea for a challenge that should be implemented, describe it in great detail in a GitHub issue and label it with the challenge label.
+
 ### Support
 
 For issues, bugs, and feature requests, open a GitHub issue. For direct assistance, contact the repository owner.
