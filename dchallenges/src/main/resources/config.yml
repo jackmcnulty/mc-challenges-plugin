@@ -1,0 +1,11 @@
+# Grace period duration in seconds
+grace-period: 60
+
+# Message to be displayed when the grace period starts
+grace-period-message: "&aGrace period started. Next challenge in 1 minute."
+
+# Message to be displayed when the grace period is skipped
+grace-period-skipped-message: "Grace period skipped! Starting the next challenge."
+
+# Message to be displayed when no grace period is active
+no-grace-period-message: "&cNo grace period is currently active."

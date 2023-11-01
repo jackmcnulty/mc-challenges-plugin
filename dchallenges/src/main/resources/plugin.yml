@@ -1,0 +1,17 @@
+main: jackm.dev.mc.App
+name: dchallenges
+version: 1.0
+api-version: 1.16
+author: jackmcnulty
+description: A plugin that allows you to create challenges for your players to complete.
+commands:
+  startchallengegame:
+    description: Start the challenge game.
+  endchallengegame:
+    description: End the challenge game.
+  lb:
+    description: Display the leaderboard.
+  sethub:
+    description: Set the end challenge location.
+  skipgp:
+    description: Skip the grace period.
