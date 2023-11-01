@@ -19,7 +19,7 @@ public class App extends JavaPlugin {
         this.saveDefaultConfig();
 
         // Initialize the challenge manager
-        challengeManager = new ChallengeManager(this, defaultEndLocation);
+        challengeManager = new ChallengeManager(this, defaultEndLocation); 
 
         // Register the commands
         getCommand("startchallengegame").setExecutor(new StartChallengeGameCommand(challengeManager));
