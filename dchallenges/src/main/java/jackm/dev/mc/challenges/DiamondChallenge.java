@@ -5,6 +5,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.World;
+
+import jackm.dev.mc.utils.RandomWorldLocation;
 
 public class DiamondChallenge implements Challenge {
     private Location endLocation;
@@ -22,7 +25,8 @@ public class DiamondChallenge implements Challenge {
         // Store the start time for later tracking
         startTime = System.currentTimeMillis();
 
-        Location randomLocation = new Location(Bukkit.getWorld("world"), 100, 65, 100); // Replace with actual random logic
+        World world = Bukkit.getWorld("world");
+        Location randomLocation = RandomWorldLocation.getRandomLocation(world, -20000, 20000, -20000, 20000);
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.teleport(randomLocation); // Teleport all players to the random location
         }
