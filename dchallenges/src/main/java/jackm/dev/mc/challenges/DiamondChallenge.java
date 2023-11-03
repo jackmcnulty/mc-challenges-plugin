@@ -34,7 +34,7 @@ public class DiamondChallenge implements Challenge {
 
     @Override
     public boolean isCompleted(Player player) {
-        return player.getInventory().contains(Material.DIAMOND); //This is two diamonds for whatever reason and they must be picked up from ground in sequence
+        return player.getInventory().contains(Material.DIAMOND);
     }
 
     @Override
