@@ -29,7 +29,7 @@ public class App extends JavaPlugin {
         getCommand("skipgp").setExecutor(new SkipGracePeriodCommand(challengeManager));
 
         // Event Listener for challenge completion (assuming you've created an EventListener class)
-        Bukkit.getPluginManager().registerEvents(new EventListener(challengeManager), this);
+        Bukkit.getPluginManager().registerEvents(new EventListener(challengeManager, this), this);
 
         getLogger().info("Plugin enabled!");
     }
