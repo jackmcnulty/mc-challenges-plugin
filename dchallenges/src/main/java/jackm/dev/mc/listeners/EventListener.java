@@ -7,7 +7,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.event.entity.EntityDeathEvent;
 
 public class EventListener implements Listener {
 
@@ -21,6 +23,14 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onEntityPickupItem(EntityPickupItemEvent event) {
+        if (event.getEntity() instanceof Player) {
+            Player player = (Player) event.getEntity();
+            Bukkit.getScheduler().runTask(plugin, () -> challengeManager.checkCompletion(player));
+        }
+    }
+
+    @EventHandler
+    public void onEntityDeath(EntityDeathEvent event) {
         if (event.getEntity() instanceof Player) {
             Player player = (Player) event.getEntity();
             Bukkit.getScheduler().runTask(plugin, () -> challengeManager.checkCompletion(player));

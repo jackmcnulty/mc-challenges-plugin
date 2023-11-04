@@ -26,7 +26,8 @@ public class ChallengeManager {
     public ChallengeManager(JavaPlugin plugin, Location endLocation) {
         this.plugin = plugin;
         this.availableChallenges = Arrays.asList(
-            new DiamondChallenge(endLocation)
+            new DiamondChallenge(endLocation),
+            new DeathByLavaChallenge(endLocation)
         );
     }
 
